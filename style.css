@@ -1,0 +1,200 @@
+/* ===== FUENTE ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+
+:root{
+    --verde-rick: #39ff14;
+    --verde-neon: #7fff00;
+    --fondo: #0d1117;
+    --card: #161b22;
+    --texto: #ffffff;
+    --gris: #9ca3af;
+}
+
+/* ===== GENERAL ===== */
+
+body{
+    background: linear-gradient(
+        135deg,
+        #050a0f,
+        #0d1117,
+        #081b11
+    );
+
+    color: var(--texto);
+    font-family: 'Orbitron', sans-serif;
+    min-height: 100vh;
+}
+
+/* ===== TITULO ===== */
+
+h1{
+    color: var(--verde-rick);
+    text-shadow:
+        0 0 10px var(--verde-rick),
+        0 0 20px var(--verde-rick),
+        0 0 40px var(--verde-rick);
+
+    font-weight: 700;
+}
+
+/* ===== TARJETAS ===== */
+
+.card{
+    background: var(--card);
+    border: 1px solid rgba(57,255,20,.3);
+    border-radius: 15px;
+
+    transition: .3s;
+
+    overflow: hidden;
+}
+
+.card:hover{
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 0 10px rgba(57,255,20,.4),
+        0 0 25px rgba(57,255,20,.3),
+        0 0 40px rgba(57,255,20,.2);
+}
+
+.card img{
+    height: 260px;
+    object-fit: cover;
+}
+
+/* ===== ESTADOS ===== */
+
+.status-dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    display:inline-block;
+    margin-right:6px;
+}
+
+.alive{
+    background:#39ff14;
+    box-shadow:0 0 10px #39ff14;
+}
+
+.dead{
+    background:#ff3131;
+    box-shadow:0 0 10px #ff3131;
+}
+
+.unknown{
+    background:#9d9d9d;
+}
+
+/* ===== BOTONES ===== */
+
+.btn-primary{
+
+    background: var(--verde-rick);
+    color:black;
+    border:none;
+    font-weight:bold;
+}
+
+.btn-primary:hover{
+
+    background: var(--verde-neon);
+
+    box-shadow:
+        0 0 10px var(--verde-rick),
+        0 0 25px var(--verde-rick);
+}
+
+.btn-secondary{
+
+    border: 1px solid var(--verde-rick);
+
+    background: transparent;
+
+    color: var(--verde-rick);
+}
+
+.btn-secondary:hover{
+
+    background: var(--verde-rick);
+
+    color:black;
+}
+
+/* ===== TABLAS DETALLE ===== */
+
+.table-dark{
+
+    --bs-table-bg: transparent;
+    --bs-table-color: white;
+}
+
+.table td{
+
+    border-color: rgba(57,255,20,.2);
+}
+
+.text-secondary{
+
+    color: #7ee787 !important;
+}
+
+/* ===== DETALLE ===== */
+
+.card-header{
+
+    background:#0f1720;
+    border-bottom:1px solid rgba(57,255,20,.2);
+}
+
+.card-footer{
+
+    background:#0f1720;
+    border-top:1px solid rgba(57,255,20,.2);
+}
+
+/* ===== IMAGEN PERSONAJE ===== */
+
+.img-fluid{
+
+    border-radius:15px;
+
+    border:2px solid var(--verde-rick);
+
+    box-shadow:
+        0 0 15px rgba(57,255,20,.4);
+}
+
+/* ===== TEXTO PAGINACION ===== */
+
+#textoPagina{
+
+    color: var(--verde-rick);
+
+    font-weight:bold;
+}
+
+/* ===== EFECTO PORTAL ===== */
+
+.portal-glow{
+
+    animation: portal 2s infinite alternate;
+}
+
+@keyframes portal {
+
+    from{
+        text-shadow:
+            0 0 10px #39ff14;
+    }
+
+    to{
+        text-shadow:
+            0 0 20px #39ff14,
+            0 0 40px #39ff14,
+            0 0 60px #39ff14;
+    }
+}
